@@ -35,12 +35,11 @@ export default memo(function Article({ storyId }) {
     var styles2 = {
         fontSize: fontsize
     };
-    var txt = story.text.value.length
     
     return story ? (
         <>
             <div className="column">
-    <div className="head"><span className="headline hl3" style={styles2}>{story.title}</span><p><span className="headline hl4">{txt} by {story.by}<br />score: {story.score} </span></p></div>
+    <div className="head"><span className="headline hl3" style={styles2}>{story.title}</span><p><span className="headline hl4">by {story.by}<br />score: {story.score} </span></p></div>
                 <div dangerouslySetInnerHTML={{ __html: story.text }}></div>
             </div>
         </>
