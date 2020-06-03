@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish="hackernews/build"
+  publish="/build"
   base = "hackernews"
 
 [[redirects]]
