@@ -63,6 +63,9 @@ p{
     line-height: 20px;
     width: 21.5%;
     display: inline-block;
+    margin: 0 0 1em;
+    position: relative;
+    float: initial;
     padding: 0 1% 0 1%;
     vertical-align: top;
     margin-bottom: 50px;

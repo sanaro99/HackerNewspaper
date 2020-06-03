@@ -3,7 +3,6 @@ import Article from './Article';
 import { getStoryIds } from '../services/hnApi';
 import '../styles/style.css';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
-import Masonry from 'react-masonry-component';
 
 export default function Newspaper() {
 
@@ -30,18 +29,9 @@ export default function Newspaper() {
                 <div className="subhead">Date: {date} {separator} {month} {separator} {year}</div>
             </div>
             <div className="content">
-            <Masonry
-                className={'my-gallery-class'} // default ''
-                elementType={'ul'} // default 'div'
-                options={{}} // default {}
-                disableImagesLoaded={false} // default false
-                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-                imagesLoadedOptions={{}} // default {}
-            >
                     {storyIds.slice(0, count).map(storyId => (
                         <Article key={storyId} storyId={storyId} />
                     ))}
-</Masonry>
             </div>
         </div>
     );
