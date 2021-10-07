@@ -10,7 +10,7 @@ export default function Newspaper() {
     const [storyIds, setStoryIds] = useState([]);
 
     useEffect(() => {
-        getStoryIds().then(data => setStoryIds(data));
+        getStoryIds().then(data => setStoryIds(data)).catch((err) => console.log(err));
     }, []);
 
     let newDate = new Date()

@@ -15,7 +15,6 @@ export const useInfiniteScroll = () => {
     ) {
       return false;
     }
-
     setLoading(true);
   }, 500);
 
